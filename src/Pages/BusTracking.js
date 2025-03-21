@@ -79,7 +79,7 @@ const BusTracking = () => {
             <Link to="/" className="nav-link">Home</Link> &nbsp;&nbsp;
             <Link to="/" className="nav-link">Tracking</Link> &nbsp;&nbsp;
             <Link to="/about" className="nav-link">About</Link> &nbsp;&nbsp;
-            <Link to="/" className="nav-link">Feedback</Link>
+            <Link to="/feedback" className="nav-link">Feedback</Link>
           </span>
         </div>
       </section>
