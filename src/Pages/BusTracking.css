@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --image-0: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAQSURBVHgBAQUA+v8AAAAAAAAFAAFkeJU4AAAAAElFTkSuQmCC);
+  --custom-width: 100vw;
+  --design-width: 2900;
+  --ratio: calc(var(--custom-width) / var(--design-width));
+}
+
+/* Default classes */
+.pos-abs {
+  position: absolute;
+}
+.fill-parent {
+  width: 100%;
+  height: 100%;
+}
+.bg-contain {
+  background-size: contain;
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-auto {
+  background-size: auto;
+}
+.bg-crop {
+  background-size: 100% 100%;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.pos-init {
+  top: 0px;
+  left: 0px;
+}
+.image-div {
+  background-color: transparent;
+  background-position: center;
+}
+
+body {
+  margin: 0px 0px;
+  padding: 0px;
+}
+
+  .parent-div1 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    justify-content: center; /* Remove excess space */
+    padding: 20px;
+    gap: 10px; /* Reduce large white spaces */
+    background-color: #f4f4f4; /* Light gray background */
+  }
+
+.marker-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  z-index: 10;
+}
+.frame-2-3537 {
+  width: 100%;
+  height: 14.41%;
+  top: 0%;
+  left: 0%;
+  z-index: 12;
+  transform: rotate(0deg);
+  overflow: hidden;
+  background: #000036ff;
+}
+.smart-metro-3538 {
+  width: 21.14%;
+  height: 47.55%;
+  top: 31.37%;
+  left: 0.9%;
+  z-index: 0;
+  transform: rotate(0deg);
+  text-align: left;
+  line-height: 0px;
+}
+.smart-metro-3538-0 {
+  font-size: 30px;
+
+  line-height: normal;
+  font-family: Inter;
+  font-weight: 600;
+
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  color: rgb(255, 255, 255);
+}
+.smart-metro-3538-2 {
+  font-size: 30px;
+
+  line-height: normal;
+  font-family: Inter;
+  font-weight: 900;
+
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  color: #ff8000ff;
+}
+.home-tracking-a-3539 {
+  top: 36.76%;
+  left: 40.72%;
+  z-index: 1;
+  text-align: left;
+}
+.home-tracking-a-3539-0 {
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 100;
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  color: #000000ff;
+}
+
+.nairobi-juja-ro-3511 {
+  top: 17.57%;
+  left: 4.66%;
+  z-index: 3;
+  text-align: center;
+}
+.nairobi-juja-ro-3511-0 {
+  font-size: 30px;
+  line-height: normal;  font-family: Inter;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: none;
+  color: #000000ff;
+}
+.group-1-358 {
+  width: 59.72%;
+  height: 60.58%;
+  top: 21.38%;
+  left: 38%;
+  z-index: 1;
+  transform: rotate(0deg);
+}
+.nodeBg-359 {
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  opacity: 1;
+}
+.rectangle-1-359 {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+
+.frame-6-3512 {
+  width: 36.9%;
+  height: 9.44%;
+  top: 26.17%;
+  left: 0.72%;
+  z-index: 4;
+  transform: rotate(0deg);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.map-options {
+  display: flex;
+  /* justify-content: space-between; Ensures spacing between buttons */
+  align-items: center; /* Aligns buttons properly */
+  gap: 10px; /* Space between buttons */
+}
+
+.map-button {
+  font-size: calc(52 * var(--ratio));
+  line-height: normal;  
+  font-family: Inter;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  color: #000000ff;
+  background: #ff8000ff;
+  border: none;
+  border-radius: 25px;
+  box-shadow:
+    0px 19.93px 39.82px 0px rgba(0, 0, 0, 0.65),
+    inset 0px 6.91px 6.91px 0px rgba(255, 255, 255, 1),
+    inset 0px -6.91px 6.91px 0px rgba(162, 62, 0, 1);
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 20px;
+  width: 30%; /* Ensures equal width buttons */
+}
+
+.frame-7-3522 {
+  width: 33.07%;
+  height: 9.91%;
+  top: 39.31%;
+  left: 2.59%;
+  z-index: 5;
+  transform: rotate(0deg);
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.route-button {
+  font-size: calc(48 * var(--ratio));
+  font-family: Inter;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  border: none;
+  gap: 10px;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow:
+    0px 19.93px 39.82px 0px rgba(43, 43, 43, 0.3),
+    inset 0px 6.91px 6.91px 0px rgba(255, 255, 255, 1),
+    inset 0px -6.91px 6.91px 0px rgba(0, 156, 0, 1);
+}
+
+.jujanairobi {
+  background: #003c02ff;
+  color: #ffffff;
+}
+
+.nairobijuja {
+  background: rgb(245, 248, 245);
+  color: #003c02ff;
+}
+
+.frame-8-3529 {
+  position: absolute;
+  width: 22.31%;
+  height: auto; /* Adjust height dynamically */
+  top: 50%;
+  left: 2.31%;
+  z-index: 6;
+  padding: 15px; /* Add padding */
+  background: #1a1a1a; /* Dark background for contrast */
+  border-radius: 10px;
+  border: 2px solid #ff8000;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.traffic-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.traffic-item .traffic-label {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-left: 10px;
+}
+
+.ellipse-3-3533, .ellipse-2-3532, .ellipse-1-3531 {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ellipse-3-3533 { background: #00ff00; }
+.ellipse-2-3532 { background: #ffa500; }
+.ellipse-1-3531 { background: #880808; }
+
+.footer {
+  width: 100%;
+  height: 13.87%;
+  position: absolute;
+  bottom: 0; /* Stick to the bottom */
+  left: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.footer-content {
+  display: flex;
+  gap: 20px; /* Space between items */
+}
+
+.footer-item {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,99 @@
+/* General container styling */
+.login-register-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/public/MetroBus.jpg');
+    background-size: cover;
+  }
+  
+  /* Image container styling */
+  .image-container {
+    flex: 1;
+    background-image: url('/public/MetroBus.jpg');
+    background-size: cover;
+  }
+  
+  /* Form container styling */
+  .form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7); /* Adjust transparency */
+    padding: 3rem;
+  }
+  
+  /* Form box styling */
+  .form-box {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Input field styling */
+  .form-box input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  /* Button styling */
+  .form-box button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .form-box button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Text link styling */
+  .form-box p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .form-box p span {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .form-box p span:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .login-register-container {
+      flex-direction: column;
+    }
+  
+    .image-container {
+      height: 40vh;
+      flex: none;
+    }
+  
+    .form-container {
+      flex: none;
+      width: 100%;
+      padding: 2rem;
+    }
+  }

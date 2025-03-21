@@ -1,0 +1,59 @@
+/* ErrorPage.css */
+
+/* General container styling */
+.error-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  /* Content container styling */
+  .error-content {
+    background-color: #ffffff; /* White background for the content box */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Header styling */
+  .error-content h1 {
+    font-size: 6rem;
+    color: #ff4d4f; /* Red color for the 404 text */
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .error-content h2 {
+    font-size: 1.75rem;
+    color: #333; /* Dark gray for the heading */
+    margin: 1rem 0 0.5rem;
+  }
+  
+  /* Paragraph styling */
+  .error-content p {
+    font-size: 1rem;
+    color: #666; /* Light gray for the description */
+    margin: 0.5rem 0 1.5rem;
+  }
+  
+  /* Button styling */
+  .error-content button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff; /* Blue background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .error-content button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

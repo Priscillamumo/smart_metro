@@ -1,0 +1,136 @@
+/* Feedback Page Styling */
+.feedback-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  .header {
+    color: navy;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .sub-header {
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: navy;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  .input-icon {
+    margin-right: 15px;
+    color: #e27419;;
+    font-size: 22px;
+  }
+  
+  textarea, input, select {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .submit-btn {
+    background: #e27419;;
+    color: navy;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background: navy;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .success-message {
+    background: #dff0d8;
+    color: #3c763d;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  
+  .success-icon {
+    margin-right: 12px;
+    font-size: 24px;
+  }
+  
+  .faq-section {
+    margin-top: 40px;
+    text-align: left;
+  }
+  
+  .faq-section h3 {
+    color: navy;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  details {
+    background: #fef5dc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .faq-icon {
+    color: #e27419;;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+  
+  .support-contacts {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: navy;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #e27419;
+  }
+  
