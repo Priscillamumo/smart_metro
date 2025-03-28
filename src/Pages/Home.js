@@ -89,72 +89,128 @@ const Home = () => {
         )}
       </div>
     </header>
-      <section
-        className="relative py-20 overflow-hidden bg-navy-900"
+    <section
+      style={{
+        position: "relative",
+        padding: "80px 20px",
+        backgroundImage: 'url("https://www.smetro.co.ke/assets/img/metrobus5.jpeg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        color: "white",
+        textAlign: "center",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div
         style={{
-          backgroundImage:
-            'url("https://www.smetro.co.ke/assets/img/metrobus5.jpeg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(10, 10, 30, 0.6)", // Semi-transparent overlay
         }}
-      >
-        <div className="absolute inset-0 bg-navy-900/60 backdrop-blur-sm"></div>
-        <div className="container mx-auto px-4 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Hero Content */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Smart Metro System
-              </h1>
-              <p className="text-lg font-bold text-black bg-white/90 p-4 rounded-lg mb-8">
-                Enhancing passenger mobility and convenience along the
-                Nairobi-Juja route (Thika Road) with real-time tracking and
-                smart features.
-              </p>
-              <div className="flex flex-wrap gap-4">
-  <button className="px-6 py-3 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600">
-    Track Your Bus Now
-  </button>
-  <button className="px-6 py-3 border border-white text-black font-bold rounded-md hover:bg-white hover:text-navy-900">
-    Learn More
-  </button>
-</div>
+      ></div>
 
-            </motion.div>
+      <div style={{ position: "relative", maxWidth: "800px", margin: "auto" }}>
+        {/* Hero Title */}
+        <h1 style={{ fontSize: "40px", fontWeight: "bold", marginBottom: "20px" }}>
+          Smart Metro System
+        </h1>
 
-            {/* Right Column - Journey Planner */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="w-full p-6 border rounded-md shadow-lg bg-white">
-  <h3 className="text-xl font-semibold text-navy-900 mb-6">NEED HELP?</h3>
-  <form className="space-y-4">
-    <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">
-        Special Service Requests
-      </label>
-      <textarea
-        rows={3}
-        placeholder="E.g., Need extra luggage space, assistance for elderly"
-        className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
-      />
-    </div>
-    <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-md">
-      Submit Request
-    </button>
-  </form>
-</div>
-            </motion.div>
-          </div>
+        {/* Hero Subtitle */}
+        <p
+          style={{
+            background: "rgba(255, 255, 255, 0.9)",
+            color: "black",
+            padding: "15px",
+            borderRadius: "8px",
+            fontSize: "18px",
+            marginBottom: "30px",
+          }}
+        >
+          Enhancing passenger mobility and convenience along the Nairobi-Juja route (Thika Road)
+          with real-time tracking and smart features.
+        </p>
+
+        {/* CTA Buttons */}
+        <div style={{ display: "flex", justifyContent: "center", gap: "15px" }}>
+          <button
+            style={{
+              background: "#ff7f00",
+              color: "white",
+              padding: "12px 20px",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Track Your Bus Now
+          </button>
+          <button
+            style={{
+              background: "transparent",
+              border: "2px solid white",
+              color: "white",
+              padding: "12px 20px",
+              borderRadius: "5px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Learn More
+          </button>
         </div>
-      </section>
+
+        {/* Service Request Form */}
+        <div
+          style={{
+            background: "white",
+            color: "black",
+            padding: "20px",
+            borderRadius: "8px",
+            marginTop: "40px",
+            textAlign: "left",
+          }}
+        >
+          <h3 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "15px" }}>NEED HELP?</h3>
+
+          <form>
+            {/* Special Service Requests */}
+            <div style={{ marginBottom: "15px" }}>
+              <label style={{ fontSize: "14px", fontWeight: "bold", display: "block", marginBottom: "5px" }}>
+                Special Service Requests
+              </label>
+              <textarea
+                rows="3"
+                placeholder="E.g., Need extra luggage space, assistance for elderly"
+                style={{
+                  width: "100%",
+                  padding: "10px",
+                  border: "1px solid #ccc",
+                  borderRadius: "5px",
+                }}
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              style={{
+                width: "100%",
+                background: "#ff7f00",
+                color: "white",
+                padding: "10px",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                fontSize: "16px",
+              }}
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
       <section id="features" style={{ padding: "40px", background: "#f8f9fa" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#1a202c" }}>
