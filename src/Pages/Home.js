@@ -177,7 +177,7 @@ const Home = () => {
 
       <div style={{ position: "relative", maxWidth: "800px", margin: "auto" }}>
         {/* Hero Title */}
-        <h1 style={{ fontSize: "40px", fontWeight: "bold", marginBottom: "20px" }}>
+        <h1 style={{ fontSize: "40px", fontWeight: "bold", marginBottom: "20px", color: "orange" }}>
           Smart Metro System
         </h1>
 
