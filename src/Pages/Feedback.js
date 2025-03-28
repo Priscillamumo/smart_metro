@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FaEnvelope, FaPhone, FaClipboardList, FaExclamationCircle, FaCheckCircle, FaClock, FaBus, FaStopCircle } from "react-icons/fa";
 import "./Feedback.css";
+import {Link} from "react-router-dom";
 
 const Feedback = () => {
   const [feedback, setFeedback] = useState({
@@ -29,6 +30,20 @@ const Feedback = () => {
 
   return (
     <div className="feedback-container">
+      <section className="frame-2-3537 pos-abs">
+        <div className="smart-metro-3538 pos-abs">
+          <span className="smart-metro-3538-0">SMART</span>
+          <span className="smart-metro-3538-2"> METRO</span>
+        </div>
+        <div className="home-tracking-a-3539 pos-abs">
+          <span className="home-tracking-a-3539-0">
+            <Link to="/" className="nav-link">Home</Link> &nbsp;&nbsp;
+            <Link to="/BusTracking" className="nav-link">Tracking</Link> &nbsp;&nbsp;
+            <Link to="/about" className="nav-link">About</Link> &nbsp;&nbsp;
+            <Link to="/feedback" className="nav-link">Feedback</Link>
+          </span>
+        </div>
+      </section>
       <h2 className="header">Passenger Feedback</h2>
       <p className="sub-header">Share your complaints, suggestions, or report any issues.</p>
       {submitted ? (
