@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const navItems = [
     { label: "Track Bus", href: "#track" },
@@ -36,58 +35,78 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="min-h-screen bg-white">
-         <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/30">
-      <div className="container flex h-16 items-center justify-between px-4">
-        {/* Logo */}
-        <a href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-white">Smart Metro</span>
-        </a>
+         <header style={{ 
+      position: "sticky", 
+      top: 0, 
+      width: "100%", 
+      background: "black", 
+      padding: "10px 20px", 
+      zIndex: 1000,
+      display: "flex", 
+      alignItems: "center", 
+      justifyContent: "space-between"
+    }}>
+      {/* Logo */}
+      <a href="/" style={{ color: "white", fontSize: "24px", fontWeight: "bold", textDecoration: "none" }}>
+        Smart Metro
+      </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+      {/* Desktop Navigation */}
+      <nav style={{ display: "none", alignItems: "center", gap: "20px" }} className="desktop-nav">
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            style={{ color: "white", fontSize: "14px", fontWeight: "bold", textDecoration: "none", padding: "8px 12px", background: "rgba(0,0,0,0.2)", borderRadius: "5px" }}
+          >
+            {item.label}
+          </a>
+        ))}
+        <button style={{ background: "#ff7f00", color: "white", padding: "8px 12px", border: "none", borderRadius: "5px", cursor: "pointer" }}>
+          PROFILE
+        </button>
+      </nav>
+
+      {/* Mobile Navigation Toggle */}
+      <button
+        style={{
+          background: "none",
+          border: "none",
+          color: "white",
+          fontSize: "20px",
+          cursor: "pointer",
+          display: "block",
+        }}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Mobile Navigation Drawer */}
+      {isOpen && (
+        <div style={{
+          position: "absolute",
+          top: "60px",
+          right: "0",
+          background: "black",
+          padding: "20px",
+          width: "200px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "15px"
+        }}>
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-bold text-white hover:text-orange-500 transition-colors px-3 py-1 rounded bg-black/20"
+              style={{ color: "white", fontSize: "16px", fontWeight: "bold", textDecoration: "none" }}
+              onClick={() => setIsOpen(false)}
             >
               {item.label}
             </a>
           ))}
-          <a
-            href="#profile"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-bold"
-          >
-            PROFILE
-          </a>
-        </nav>
-
-        {/* Mobile Navigation (Burger Menu) */}
-        <button
-          className="md:hidden text-white bg-black/50 p-2 rounded"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button>
-
-        {/* Mobile Nav Menu */}
-        {isOpen && (
-          <div className="absolute top-16 right-0 bg-black/80 p-4 rounded-md w-48">
-            <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-lg font-bold text-white hover:text-orange-500 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
     <section
       style={{
