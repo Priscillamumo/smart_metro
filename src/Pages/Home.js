@@ -35,72 +35,120 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="min-h-screen bg-white">
-         <header style={{ 
-      position: "sticky", 
-      top: 0, 
-      width: "100%", 
-      background: "black", 
-      padding: "10px 20px", 
-      zIndex: 1000,
-      display: "flex", 
-      alignItems: "center", 
-      justifyContent: "space-between"
-    }}>
-      {/* Logo */}
-      <a href="/" style={{ color: "white", fontSize: "24px", fontWeight: "bold", textDecoration: "none" }}>
-        Smart Metro
-      </a>
-
-      {/* Desktop Navigation */}
-      <nav style={{ display: "none", alignItems: "center", gap: "20px" }} className="desktop-nav">
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            style={{ color: "white", fontSize: "14px", fontWeight: "bold", textDecoration: "none", padding: "8px 12px", background: "rgba(0,0,0,0.2)", borderRadius: "5px" }}
-          >
-            {item.label}
-          </a>
-        ))}
-        <button style={{ background: "#ff7f00", color: "white", padding: "8px 12px", border: "none", borderRadius: "5px", cursor: "pointer" }}>
-          PROFILE
-        </button>
-      </nav>
-
-      {/* Mobile Navigation Toggle */}
-      <button
+      return (
+    <header
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        width: "100%",
+        background: "rgba(0, 0, 0, 0.8)", // Semi-transparent black
+        padding: "10px 20px",
+      }}
+    >
+      <div
         style={{
-          background: "none",
-          border: "none",
-          color: "white",
-          fontSize: "20px",
-          cursor: "pointer",
-          display: "block",
-        }}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        ☰
-      </button>
-
-      {/* Mobile Navigation Drawer */}
-      {isOpen && (
-        <div style={{
-          position: "absolute",
-          top: "60px",
-          right: "0",
-          background: "black",
-          padding: "20px",
-          width: "200px",
           display: "flex",
-          flexDirection: "column",
-          gap: "15px"
-        }}>
+          justifyContent: "space-between",
+          alignItems: "center",
+          maxWidth: "1200px",
+          margin: "auto",
+        }}
+      >
+        {/* Logo */}
+        <a href="/" style={{ fontSize: "20px", fontWeight: "bold", color: "white", textDecoration: "none" }}>
+          Smart Metro
+        </a>
+
+        {/* Desktop Navigation */}
+        <nav
+          style={{
+            display: "flex",
+            gap: "15px",
+          }}
+        >
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              style={{ color: "white", fontSize: "16px", fontWeight: "bold", textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontWeight: "bold",
+                padding: "8px 12px",
+                borderRadius: "5px",
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transition: "background 0.3s",
+              }}
+              onMouseOver={(e) => (e.target.style.backgroundColor = "rgba(255, 165, 0, 0.7)")}
+              onMouseOut={(e) => (e.target.style.backgroundColor = "rgba(255, 255, 255, 0.2)")}
+            >
+              {item.label}
+            </a>
+          ))}
+          <button
+            style={{
+              padding: "8px 16px",
+              background: "#ff7f00",
+              color: "white",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              transition: "background 0.3s",
+            }}
+            onMouseOver={(e) => (e.target.style.background = "#e66f00")}
+            onMouseOut={(e) => (e.target.style.background = "#ff7f00")}
+          >
+            PROFILE
+          </button>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "white",
+            fontSize: "24px",
+            cursor: "pointer",
+            display: "none",
+          }}
+          className="mobile-menu-button"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {isOpen && (
+        <div
+          style={{
+            position: "absolute",
+            top: "60px",
+            right: "20px",
+            background: "black",
+            padding: "15px",
+            borderRadius: "5px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
               onClick={() => setIsOpen(false)}
+              style={{
+                color: "white",
+                textDecoration: "none",
+                padding: "10px",
+                fontWeight: "bold",
+                transition: "color 0.3s",
+              }}
+              onMouseOver={(e) => (e.target.style.color = "orange")}
+              onMouseOut={(e) => (e.target.style.color = "white")}
             >
               {item.label}
             </a>
