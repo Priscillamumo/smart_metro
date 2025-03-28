@@ -106,7 +106,6 @@ const Home = () => {
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(10, 10, 30, 0.6)", // Semi-transparent overlay
         }}
       ></div>
 
