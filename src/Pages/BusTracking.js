@@ -77,7 +77,7 @@ const BusTracking = () => {
         <div className="home-tracking-a-3539 pos-abs">
           <span className="home-tracking-a-3539-0">
             <Link to="/" className="nav-link">Home</Link> &nbsp;&nbsp;
-            <Link to="/" className="nav-link">Tracking</Link> &nbsp;&nbsp;
+            <Link to="/BusTracking" className="nav-link">Tracking</Link> &nbsp;&nbsp;
             <Link to="/about" className="nav-link">About</Link> &nbsp;&nbsp;
             <Link to="/feedback" className="nav-link">Feedback</Link>
           </span>

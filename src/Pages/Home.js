@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // For navigation
 
 const navItems = [
-    { label: "Track Bus", href: "#track" },
+    { label: "Track Bus", href: "/BusTracking" },
     { label: "Features", href: "#features" },
     { label: "Route Info", href: "#route" },
-    { label: "About Us", href: "#about" },
-    { label: "Feedback", href: "#feedback" },
+    { label: "About Us", href: "/about" },
+    { label: "Feedback", href: "/feedback" },
   ];
   const features = [
     {
@@ -33,6 +34,15 @@ const navItems = [
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
+      const navigate = useNavigate(); // React Router navigation
+
+  const handleNavigation = (href) => {
+    if (href.startsWith("/")) {
+      navigate(href); // Navigate to a new page
+    } else {
+      window.location.href = href; // For in-page navigation
+    }
+  };
   return (
     <div className="min-h-screen bg-white">
     <header
@@ -95,6 +105,7 @@ const Home = () => {
               cursor: "pointer",
               transition: "background 0.3s",
             }}
+            
             onMouseOver={(e) => (e.target.style.background = "#e66f00")}
             onMouseOut={(e) => (e.target.style.background = "#ff7f00")}
           >
@@ -148,6 +159,7 @@ const Home = () => {
               }}
               onMouseOver={(e) => (e.target.style.color = "orange")}
               onMouseOut={(e) => (e.target.style.color = "white")}
+              
             >
               {item.label}
             </a>
