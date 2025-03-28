@@ -229,6 +229,60 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <section id="feedback" style={{ padding: "40px", background: "#f8f9fa" }}>
+      <div style={{ maxWidth: "600px", margin: "auto", textAlign: "center" }}>
+        
+        {/* Header */}
+        <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#1a202c", marginBottom: "10px" }}>
+          Get in Touch
+        </h2>
+        <p style={{ fontSize: "16px", color: "#4a5568", marginBottom: "20px" }}>
+          We value your feedback! Let us know how we can improve your travel experience.
+        </p>
+
+        {/* Form Container */}
+        <div style={{ background: "white", padding: "20px", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }}>
+          <form style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+            
+            {/* Name Input */}
+            <div>
+              <label style={{ fontSize: "14px", fontWeight: "bold", color: "#4a5568", display: "block", marginBottom: "5px" }}>
+                Name
+              </label>
+              <input type="text" placeholder="Your name" 
+                style={{ width: "100%", padding: "10px", border: "1px solid #ccc", borderRadius: "5px" }} />
+            </div>
+
+            {/* Email Input */}
+            <div>
+              <label style={{ fontSize: "14px", fontWeight: "bold", color: "#4a5568", display: "block", marginBottom: "5px" }}>
+                Email
+              </label>
+              <input type="email" placeholder="Your email"
+                style={{ width: "100%", padding: "10px", border: "1px solid #ccc", borderRadius: "5px" }} />
+            </div>
+
+            {/* Message Input */}
+            <div>
+              <label style={{ fontSize: "14px", fontWeight: "bold", color: "#4a5568", display: "block", marginBottom: "5px" }}>
+                Message
+              </label>
+              <textarea placeholder="Your feedback or message"
+                style={{ width: "100%", padding: "10px", border: "1px solid #ccc", borderRadius: "5px", minHeight: "120px" }}>
+              </textarea>
+            </div>
+
+            {/* Submit Button */}
+            <button type="submit"
+              style={{ width: "100%", background: "#ff7f00", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer" }}>
+              Send Message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
     </div>
   );
 };
