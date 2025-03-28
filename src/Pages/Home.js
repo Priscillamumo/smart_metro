@@ -190,6 +190,45 @@ const Home = () => {
         ))}
       </div>
     </section>
+    <section id="route" style={{ padding: "40px", background: "white" }}>
+      <div style={{ maxWidth: "900px", margin: "auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "center" }}>
+        
+        {/* Text Content */}
+        <div>
+          <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#1a202c", marginBottom: "20px" }}>
+            Nairobi - Juja Route
+          </h2>
+          <p style={{ fontSize: "16px", color: "#4a5568", marginBottom: "20px" }}>
+            Our smart metro service operates along the busy Thika Road corridor,
+            connecting Nairobi CBD to Juja with multiple stops along the way.
+          </p>
+
+          {/* Key Stops */}
+          <div style={{ background: "#f8f9fa", padding: "20px", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }}>
+            <h3 style={{ fontSize: "18px", fontWeight: "bold", color: "#1a202c", marginBottom: "10px" }}>
+              Key Stops
+            </h3>
+            <ul style={{ listStyle: "none", paddingLeft: "0", color: "#4a5568" }}>
+              <li>• Nairobi CBD Terminal</li>
+              <li>• Ngara</li>
+              <li>• Muthaiga</li>
+              <li>• Kasarani</li>
+              <li>• Ruiru</li>
+              <li>• Juja Town</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <img
+            src="https://images.unsplash.com/photo-1577086664693-894d8405334a"
+            alt="Nairobi-Juja Route Map"
+            style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }}
+          />
+        </div>
+      </div>
+    </section>
     </div>
   );
 };
