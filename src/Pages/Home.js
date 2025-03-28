@@ -9,6 +9,29 @@ const navItems = [
     { label: "About Us", href: "#about" },
     { label: "Feedback", href: "#feedback" },
   ];
+  const features = [
+    {
+      icon: "⏰", // Clock emoji as a simple replacement
+      title: "Real-Time Tracking",
+      description: "Track your bus location and arrival times in real-time",
+    },
+    {
+      icon: "📍", // Map Pin emoji
+      title: "Route Planning",
+      description: "Plan your journey with detailed route information",
+    },
+    {
+      icon: "🔔", // Bell emoji
+      title: "Smart Notifications",
+      description: "Get alerts about delays and schedule changes",
+    },
+    {
+      icon: "⭐", // Star emoji
+      title: "Service Rating",
+      description: "Rate your journey and provide feedback",
+    },
+  ];
+
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
   return (
@@ -132,6 +155,41 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section id="features" style={{ padding: "40px", background: "#f8f9fa" }}>
+      <div style={{ textAlign: "center", marginBottom: "40px" }}>
+        <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#1a202c" }}>
+          Smart Features for Smart Travel
+        </h2>
+        <p style={{ fontSize: "16px", color: "#4a5568", maxWidth: "600px", margin: "auto" }}>
+          Experience seamless travel with our innovative features designed to
+          make your journey comfortable and efficient.
+        </p>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", maxWidth: "800px", margin: "auto" }}>
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            style={{
+              background: "white",
+              padding: "20px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              textAlign: "center",
+              transition: "transform 0.3s",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+          >
+            <div style={{ fontSize: "40px", marginBottom: "10px" }}>{feature.icon}</div>
+            <h3 style={{ fontSize: "18px", fontWeight: "bold", color: "#1a202c" }}>
+              {feature.title}
+            </h3>
+            <p style={{ fontSize: "14px", color: "#4a5568" }}>{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
     </div>
   );
 };
