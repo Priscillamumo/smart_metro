@@ -1,8 +1,71 @@
 import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+
+const navItems = [
+    { label: "Track Bus", href: "#track" },
+    { label: "Features", href: "#features" },
+    { label: "Route Info", href: "#route" },
+    { label: "About Us", href: "#about" },
+    { label: "Feedback", href: "#feedback" },
+  ];
 const Home = () => {
+    const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="min-h-screen bg-white">
+         <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/30">
+      <div className="container flex h-16 items-center justify-between px-4">
+        {/* Logo */}
+        <a href="/" className="flex items-center space-x-2">
+          <span className="text-2xl font-bold text-white">Smart Metro</span>
+        </a>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-6">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-bold text-white hover:text-orange-500 transition-colors px-3 py-1 rounded bg-black/20"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href="#profile"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-bold"
+          >
+            PROFILE
+          </a>
+        </nav>
+
+        {/* Mobile Navigation (Burger Menu) */}
+        <button
+          className="md:hidden text-white bg-black/50 p-2 rounded"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
+
+        {/* Mobile Nav Menu */}
+        {isOpen && (
+          <div className="absolute top-16 right-0 bg-black/80 p-4 rounded-md w-48">
+            <nav className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-lg font-bold text-white hover:text-orange-500 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
       <section
         className="relative py-20 overflow-hidden bg-navy-900"
         style={{
