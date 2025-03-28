@@ -35,7 +35,6 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="min-h-screen bg-white">
-      return (
     <header
       style={{
         position: "sticky",
